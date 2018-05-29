@@ -15,7 +15,7 @@ const data = [
 
 app.get('/',(req,res)=> {
     let ul = "<ul>"
-    ul += data.map((v)=>"<li>"+v+"</li>")
+    ul += data.map((v)=>"<li>"+v+"</li>").join('')
     ul += "</ul>"
     let form = "<form action='/add' method='POST'>"+
                     "<input type='text' name='info'/>"+
