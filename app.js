@@ -22,7 +22,12 @@ app.get('/',(req,res)=> {
                     "<input type='submit' name='submit' value='Add'/>"+
                "</form>"
     res.send("<h1>Hellow World!</h1> <br/>My first express App<br/>"+ul+form)
-})  
+})
+
+app.get('/list',(req,res)=> {
+    res.setHeader('Content-Type', 'application/json');
+    res.send(JSON.stringify(data));
+})
 
 app.post('/add',(req,res)=> {
     console.log(req)
